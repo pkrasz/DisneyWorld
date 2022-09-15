@@ -14,6 +14,11 @@
 		A8F95A5D28D368D400787A22 /* DisneyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A5C28D368D400787A22 /* DisneyWorldTests.swift */; };
 		A8F95A6728D368D400787A22 /* DisneyWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A6628D368D400787A22 /* DisneyWorldUITests.swift */; };
 		A8F95A6928D368D400787A22 /* DisneyWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A6828D368D400787A22 /* DisneyWorldUITestsLaunchTests.swift */; };
+		A8F95A7A28D3739200787A22 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A7928D3739200787A22 /* BaseCoordinator.swift */; };
+		A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A7B28D377C000787A22 /* CoordinatorType.swift */; };
+		A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A7D28D3787E00787A22 /* Coordinator.swift */; };
+		A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8028D37B6400787A22 /* CharactersViewController.swift */; };
+		A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		A8F95A6228D368D400787A22 /* DisneyWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F95A6628D368D400787A22 /* DisneyWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyWorldUITests.swift; sourceTree = "<group>"; };
 		A8F95A6828D368D400787A22 /* DisneyWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8F95A7928D3739200787A22 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		A8F95A7B28D377C000787A22 /* CoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
+		A8F95A7D28D3787E00787A22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A8F95A8028D37B6400787A22 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +105,9 @@
 		A8F95A4428D368D300787A22 /* DisneyWorld */ = {
 			isa = PBXGroup;
 			children = (
+				A8F95A7728D3737200787A22 /* Utils */,
 				A8F95A4528D368D300787A22 /* AppDelegate.swift */,
+				A8F95A4928D368D300787A22 /* ViewController.swift */,
 				A8F95A7628D3721A00787A22 /* Features */,
 				A8F95A7528D371D900787A22 /* Resources */,
 			);
@@ -132,9 +144,36 @@
 		A8F95A7628D3721A00787A22 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A8F95A4928D368D300787A22 /* ViewController.swift */,
+				A8F95A7F28D37B3200787A22 /* Characters */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		A8F95A7728D3737200787A22 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A7828D3737D00787A22 /* Coordinator */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A8F95A7828D3737D00787A22 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A7928D3739200787A22 /* BaseCoordinator.swift */,
+				A8F95A7B28D377C000787A22 /* CoordinatorType.swift */,
+				A8F95A7D28D3787E00787A22 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A8F95A7F28D37B3200787A22 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A8028D37B6400787A22 /* CharactersViewController.swift */,
+				A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */,
+				A8F95A7A28D3739200787A22 /* BaseCoordinator.swift in Sources */,
+				A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */,
+				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
+				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
+				A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
