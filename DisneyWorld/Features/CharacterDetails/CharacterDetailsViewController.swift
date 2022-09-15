@@ -12,7 +12,7 @@ class CharacterDetailsViewController: UIViewController {
     //MARK: - Properties
     
     private let apiClient: ApiClientType
-    private let characterID: Int
+    private let character: Character
     
 
     var contentView: CharacterDetailsView {
@@ -21,9 +21,9 @@ class CharacterDetailsViewController: UIViewController {
     
     //MARK: - Initializator
     
-    init(apiClient: ApiClientType, characterId: Int) {
+    init(apiClient: ApiClientType, character: Character) {
         self.apiClient = apiClient
-        self.characterID = characterId
+        self.character = character
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -50,16 +50,7 @@ class CharacterDetailsViewController: UIViewController {
     }
     
     private func setupBindings() {
-        let characterIdString = String(characterID)
-        apiClient.getData(endpoint: characterIdString, as: Character.self) { data, error in
-            if let data = data {
-                print("API CLIENT")
-                print(data)
-            }
-            if let error = error {
-                print("Error: \(error)")
-            }
-        }
+        print(character)
 
     }
 }

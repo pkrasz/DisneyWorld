@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CharactersCoordinatorInputs: AnyObject {
-    func coordinateToDetails(with id: Int)
+    func coordinateToDetails(with character: Character)
 }
 
 class CharacterCoordinator: Coordinator {
@@ -36,8 +36,8 @@ class CharacterCoordinator: Coordinator {
 }
 
 extension CharacterCoordinator: CharactersCoordinatorInputs {
-    func coordinateToDetails(with id: Int) {
-        let coordinator = CharacterDetailsCoordinator(navigationController: navigationController, environment: environment.characterDetailsEnvironment, characterId: id)
+    func coordinateToDetails(with character: Character) {
+        let coordinator = CharacterDetailsCoordinator(navigationController: navigationController, environment: environment.characterDetailsEnvironment, character: character)
         coordinate(to: coordinator)
     }
 }

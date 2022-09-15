@@ -101,7 +101,7 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let characterID = charactersArr[indexPath.row]._id
-        coordinator?.coordinateToDetails(with: characterID)
+        let character = charactersArr[indexPath.row]
+        coordinator?.coordinateToDetails(with: character)
     }
 }
