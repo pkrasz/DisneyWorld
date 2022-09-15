@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A4528D368D300787A22 /* AppDelegate.swift */; };
-		A8F95A4828D368D300787A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A4728D368D300787A22 /* SceneDelegate.swift */; };
 		A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A4928D368D300787A22 /* ViewController.swift */; };
-		A8F95A4D28D368D300787A22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F95A4B28D368D300787A22 /* Main.storyboard */; };
 		A8F95A4F28D368D400787A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F95A4E28D368D400787A22 /* Assets.xcassets */; };
 		A8F95A5228D368D400787A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F95A5028D368D400787A22 /* LaunchScreen.storyboard */; };
 		A8F95A5D28D368D400787A22 /* DisneyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A5C28D368D400787A22 /* DisneyWorldTests.swift */; };
@@ -38,9 +36,7 @@
 /* Begin PBXFileReference section */
 		A8F95A4228D368D300787A22 /* DisneyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F95A4528D368D300787A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8F95A4728D368D300787A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A8F95A4928D368D300787A22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A8F95A4C28D368D300787A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8F95A4E28D368D400787A22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F95A5128D368D400787A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F95A5328D368D400787A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,9 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A8F95A4528D368D300787A22 /* AppDelegate.swift */,
-				A8F95A4728D368D300787A22 /* SceneDelegate.swift */,
 				A8F95A4928D368D300787A22 /* ViewController.swift */,
-				A8F95A4B28D368D300787A22 /* Main.storyboard */,
 				A8F95A4E28D368D400787A22 /* Assets.xcassets */,
 				A8F95A5028D368D400787A22 /* LaunchScreen.storyboard */,
 				A8F95A5328D368D400787A22 /* Info.plist */,
@@ -233,7 +227,6 @@
 			files = (
 				A8F95A5228D368D400787A22 /* LaunchScreen.storyboard in Resources */,
 				A8F95A4F28D368D400787A22 /* Assets.xcassets in Resources */,
-				A8F95A4D28D368D300787A22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +253,6 @@
 			files = (
 				A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
-				A8F95A4828D368D300787A22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A8F95A4B28D368D300787A22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8F95A4C28D368D300787A22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A8F95A5028D368D400787A22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +426,6 @@
 				INFOPLIST_FILE = DisneyWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +453,6 @@
 				INFOPLIST_FILE = DisneyWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
