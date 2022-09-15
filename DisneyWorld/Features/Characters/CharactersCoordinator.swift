@@ -13,17 +13,19 @@ class CharacterCoordinator: Coordinator {
     //MARK: - Properties
     
     private let navigationController: UINavigationController
+    private let environment: CharactersEnvironment
     
     //MARK: - Initializator
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: UINavigationController, environment: CharactersEnvironment) {
         self.navigationController = navigationController
+        self.environment = environment
     }
     
     //MARK: - Coordinator
     
     func start() {
-        let viewController = CharactersViewController()
+        let viewController = CharactersViewController(apiClient: environment.apiClient)
         navigationController.setViewControllers([viewController], animated: false)
     }
     

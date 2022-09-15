@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A4528D368D300787A22 /* AppDelegate.swift */; };
-		A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A4928D368D300787A22 /* ViewController.swift */; };
 		A8F95A4F28D368D400787A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F95A4E28D368D400787A22 /* Assets.xcassets */; };
 		A8F95A5228D368D400787A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8F95A5028D368D400787A22 /* LaunchScreen.storyboard */; };
 		A8F95A5D28D368D400787A22 /* DisneyWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A5C28D368D400787A22 /* DisneyWorldTests.swift */; };
@@ -20,6 +19,8 @@
 		A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8028D37B6400787A22 /* CharactersViewController.swift */; };
 		A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */; };
 		A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8528D3827B00787A22 /* ApiClient.swift */; };
+		A8F95A8828D383F600787A22 /* CharactersEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */; };
+		A8F95A8B28D3874200787A22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8A28D3874200787A22 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 /* Begin PBXFileReference section */
 		A8F95A4228D368D300787A22 /* DisneyWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8F95A4528D368D300787A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8F95A4928D368D300787A22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8F95A4E28D368D400787A22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8F95A5128D368D400787A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8F95A5328D368D400787A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		A8F95A8028D37B6400787A22 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 		A8F95A8528D3827B00787A22 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEnvironment.swift; sourceTree = "<group>"; };
+		A8F95A8A28D3874200787A22 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,9 @@
 		A8F95A4428D368D300787A22 /* DisneyWorld */ = {
 			isa = PBXGroup;
 			children = (
+				A8F95A8928D3872700787A22 /* Models */,
 				A8F95A7728D3737200787A22 /* Utils */,
 				A8F95A4528D368D300787A22 /* AppDelegate.swift */,
-				A8F95A4928D368D300787A22 /* ViewController.swift */,
 				A8F95A7628D3721A00787A22 /* Features */,
 				A8F95A7528D371D900787A22 /* Resources */,
 			);
@@ -175,6 +177,7 @@
 			children = (
 				A8F95A8028D37B6400787A22 /* CharactersViewController.swift */,
 				A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */,
+				A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				A8F95A8528D3827B00787A22 /* ApiClient.swift */,
 			);
 			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		A8F95A8928D3872700787A22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A8A28D3874200787A22 /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,12 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */,
+				A8F95A8828D383F600787A22 /* CharactersEnvironment.swift in Sources */,
 				A8F95A7A28D3739200787A22 /* BaseCoordinator.swift in Sources */,
 				A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */,
 				A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */,
 				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
 				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
+				A8F95A8B28D3874200787A22 /* Character.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
 				A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */,
 			);

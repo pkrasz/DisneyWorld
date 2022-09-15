@@ -17,10 +17,7 @@ final class ApiClient: ApiClientType {
     
     private let session: URLSession = .shared
     private let baseUrl: String = "https://api.disneyapi.dev/characters"
-    
-    //MARK: Initializator
-    
-    private init() {}
+
     
     // MARK: - Methods
     
