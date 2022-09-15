@@ -14,6 +14,7 @@ class CharacterDetailsViewController: UIViewController {
     private let apiClient: ApiClientType
     private let character: Character
     
+    var characterImage: UIImage?
 
     var contentView: CharacterDetailsView {
         return view as! CharacterDetailsView
@@ -50,7 +51,14 @@ class CharacterDetailsViewController: UIViewController {
     }
     
     private func setupBindings() {
-        print(character)
+        let url = URL(string: character.imageUrl)
+        guard let url = url else { return }
+        
+        apiClient.getImage(for: url) { [weak self] image in
+            if let image = image {
+                self?.characterImage = image
+            }
+        }
 
     }
 }

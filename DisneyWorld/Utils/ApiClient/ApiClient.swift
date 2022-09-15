@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ApiClientType: AnyObject {
     func getData<Object: Decodable>(endpoint: String?, as type: Object.Type, completion: @escaping (Object?, String?) -> Void)
+    
+    func getImage(for url: URL, completion: @escaping (UIImage?) -> Void)
 }
 
 final class ApiClient: ApiClientType {
@@ -39,6 +42,16 @@ final class ApiClient: ApiClientType {
             }
             if let error = error {
                 completion(nil,error.localizedDescription)
+            }
+        }
+        task.resume()
+    }
+    
+    func getImage(for url: URL, completion: @escaping (UIImage?) -> Void) {
+        let task = session.dataTask(with: url) { data, _, _ in
+            if let data = data {
+                let image = UIImage(data: data)
+                completion(image)
             }
         }
         task.resume()
