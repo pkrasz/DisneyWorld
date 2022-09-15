@@ -19,6 +19,7 @@
 		A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A7D28D3787E00787A22 /* Coordinator.swift */; };
 		A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8028D37B6400787A22 /* CharactersViewController.swift */; };
 		A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */; };
+		A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8528D3827B00787A22 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A8F95A7D28D3787E00787A22 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A8F95A8028D37B6400787A22 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
+		A8F95A8528D3827B00787A22 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		A8F95A7728D3737200787A22 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A8F95A8428D3826F00787A22 /* ApiClient */,
 				A8F95A7828D3737D00787A22 /* Coordinator */,
 			);
 			path = Utils;
@@ -174,6 +177,14 @@
 				A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */,
 			);
 			path = Characters;
+			sourceTree = "<group>";
+		};
+		A8F95A8428D3826F00787A22 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A8528D3827B00787A22 /* ApiClient.swift */,
+			);
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,7 @@
 				A8F95A4A28D368D300787A22 /* ViewController.swift in Sources */,
 				A8F95A7A28D3739200787A22 /* BaseCoordinator.swift in Sources */,
 				A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */,
+				A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */,
 				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
 				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
