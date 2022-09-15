@@ -6,11 +6,38 @@
 //
 
 import UIKit
+import SnapKit
 
 class CharacterDetailsView: UIView {
 
     //MARK: - Subview
 
+    let characterImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        image.backgroundColor = .darkGray.withAlphaComponent(0.5)
+        image.layer.cornerRadius = 15
+        image.clipsToBounds = true
+        return image
+    }()
+        
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = .white
+        return label
+    }()
+    
+    let detailsView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .darkGray.withAlphaComponent(0.5)
+        view.layer.cornerRadius = 15
+        return view
+    }()
+    
     
     //MARK: - Initializator
     
@@ -43,10 +70,28 @@ class CharacterDetailsView: UIView {
     
     func setupSubviews() {
 
+        [characterImage,
+        detailsView].forEach(addSubview)
     }
     
     func setupConstraints() {
 
+        characterImage.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.height.equalToSuperview().multipliedBy(0.3)
+            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+//            make.bottom.lessThanOrEqualToSuperview()
+        }
+        detailsView.snp.makeConstraints { make in
+            make.top.equalTo(characterImage.snp.bottom).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-20)
+        }
+        
+        
     }
     
 }

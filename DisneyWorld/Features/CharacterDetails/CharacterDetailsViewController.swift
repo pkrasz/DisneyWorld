@@ -13,8 +13,14 @@ class CharacterDetailsViewController: UIViewController {
     
     private let apiClient: ApiClientType
     private let character: Character
-    
-    var characterImage: UIImage?
+    private var characterImage: UIImage? {
+        didSet {
+            DispatchQueue.main.async {
+                self.setImage()
+            }
+        }
+    }
+
 
     var contentView: CharacterDetailsView {
         return view as! CharacterDetailsView
@@ -60,5 +66,10 @@ class CharacterDetailsViewController: UIViewController {
             }
         }
 
+    }
+    //MARK: - Methods
+    
+    func setImage() {
+        contentView.characterImage.image = characterImage
     }
 }
