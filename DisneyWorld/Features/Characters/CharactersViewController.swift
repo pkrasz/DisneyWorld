@@ -15,8 +15,6 @@ class CharactersViewController: UIViewController {
     let tableViewIdentifier = "UITableViewCell"
     var charactersArr: [Character] = [] {
         didSet {
-            print("ZAPELNIONE")
-            print(charactersArr)
             DispatchQueue.main.async {
                 self.contentView.charactersTableView.reloadData()
             }
@@ -54,6 +52,7 @@ class CharactersViewController: UIViewController {
     //MARK: - Setup
     
     private func setupView() {
+        
         contentView.charactersTableView.dataSource = self
         contentView.charactersTableView.delegate = self
         contentView.charactersTableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewIdentifier)
@@ -83,6 +82,7 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifier, for: indexPath)
         let character = charactersArr[indexPath.row]
         cell.textLabel?.text = character.name
+        cell.backgroundColor = .clear
         return cell
     }
     

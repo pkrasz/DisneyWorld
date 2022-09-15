@@ -15,7 +15,7 @@ class CharactersView: UIView {
     let charactersTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -27,6 +27,7 @@ class CharactersView: UIView {
         setupView()
         setupSubviews()
         setupConstraints()
+
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +37,15 @@ class CharactersView: UIView {
     //MARK: - Setup
     
     func setupView() {
-        backgroundColor = .systemCyan
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = UIScreen.main.bounds
+        gradientLayer.colors = [
+            UIColor.systemPink.cgColor,
+            UIColor.blue.cgColor
+        ]
+        layer.addSublayer(gradientLayer)
+
     }
     
     func setupSubviews() {
