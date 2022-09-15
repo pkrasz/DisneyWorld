@@ -23,6 +23,10 @@
 		A8F95A8B28D3874200787A22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8A28D3874200787A22 /* Character.swift */; };
 		A8F95A8E28D38A1700787A22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8F95A8D28D38A1700787A22 /* SnapKit */; };
 		A8F95A9028D38A8100787A22 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8F28D38A8100787A22 /* CharactersView.swift */; };
+		A8F95A9328D3AC2000787A22 /* CharacterDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9228D3AC2000787A22 /* CharacterDetailsView.swift */; };
+		A8F95A9528D3AC3400787A22 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */; };
+		A8F95A9728D3AC4500787A22 /* CharacterDetailsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */; };
+		A8F95A9928D3AC5600787A22 /* CharacterDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEnvironment.swift; sourceTree = "<group>"; };
 		A8F95A8A28D3874200787A22 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		A8F95A8F28D38A8100787A22 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		A8F95A9228D3AC2000787A22 /* CharacterDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsView.swift; sourceTree = "<group>"; };
+		A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsEnvironment.swift; sourceTree = "<group>"; };
+		A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 		A8F95A7628D3721A00787A22 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A8F95A9128D3ABFA00787A22 /* CharacterDetails */,
 				A8F95A7F28D37B3200787A22 /* Characters */,
 			);
 			path = Features;
@@ -201,6 +210,17 @@
 				A8F95A8A28D3874200787A22 /* Character.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A8F95A9128D3ABFA00787A22 /* CharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A8F95A9228D3AC2000787A22 /* CharacterDetailsView.swift */,
+				A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */,
+				A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */,
+				A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */,
+			);
+			path = CharacterDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +362,11 @@
 				A8F95A8828D383F600787A22 /* CharactersEnvironment.swift in Sources */,
 				A8F95A7A28D3739200787A22 /* BaseCoordinator.swift in Sources */,
 				A8F95A8128D37B6400787A22 /* CharactersViewController.swift in Sources */,
+				A8F95A9728D3AC4500787A22 /* CharacterDetailsEnvironment.swift in Sources */,
+				A8F95A9328D3AC2000787A22 /* CharacterDetailsView.swift in Sources */,
+				A8F95A9928D3AC5600787A22 /* CharacterDetailsCoordinator.swift in Sources */,
 				A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */,
+				A8F95A9528D3AC3400787A22 /* CharacterDetailsViewController.swift in Sources */,
 				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
 				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
 				A8F95A9028D38A8100787A22 /* CharactersView.swift in Sources */,

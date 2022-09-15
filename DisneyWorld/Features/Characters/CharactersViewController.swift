@@ -7,11 +7,13 @@
 
 import UIKit
 
-class CharactersViewController: UIViewController {
+final class CharactersViewController: UIViewController {
     
     //MARK: - Properties
     
     private let apiClient: ApiClientType
+    weak var coordinator: CharactersCoordinatorInputs?
+    
     let tableViewIdentifier = "UITableViewCell"
     var charactersArr: [Character] = [] {
         didSet {
@@ -99,8 +101,7 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(charactersArr[indexPath.row])
+        let characterID = charactersArr[indexPath.row]._id
+        coordinator?.coordinateToDetails(with: characterID)
     }
-    
-    
 }

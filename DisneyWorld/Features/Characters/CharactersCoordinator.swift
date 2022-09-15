@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol CharactersCoordinatorInputs: AnyObject {
+    func coordinateToDetails(with id: Int)
+}
+
 class CharacterCoordinator: Coordinator {
     
     //MARK: - Properties
@@ -26,8 +30,14 @@ class CharacterCoordinator: Coordinator {
     
     func start() {
         let viewController = CharactersViewController(apiClient: environment.apiClient)
+        viewController.coordinator = self
         navigationController.setViewControllers([viewController], animated: false)
     }
-    
-    
+}
+
+extension CharacterCoordinator: CharactersCoordinatorInputs {
+    func coordinateToDetails(with id: Int) {
+        let coordinator = CharacterDetailsCoordinator(navigationController: navigationController, environment: environment.characterDetailsEnvironment, characterId: id)
+        coordinate(to: coordinator)
+    }
 }

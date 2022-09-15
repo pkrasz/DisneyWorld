@@ -10,3 +10,9 @@ import Foundation
 struct CharactersEnvironment {
     let apiClient: ApiClientType
 }
+
+extension CharactersEnvironment {
+    var characterDetailsEnvironment: CharacterDetailsEnvironment {
+        CharacterDetailsEnvironment(apiClient: apiClient)
+    }
+}
