@@ -21,6 +21,7 @@
 		A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8528D3827B00787A22 /* ApiClient.swift */; };
 		A8F95A8828D383F600787A22 /* CharactersEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */; };
 		A8F95A8B28D3874200787A22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8A28D3874200787A22 /* Character.swift */; };
+		A8F95A8E28D38A1700787A22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8F95A8D28D38A1700787A22 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F95A8E28D38A1700787A22 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +216,9 @@
 			dependencies = (
 			);
 			name = DisneyWorld;
+			packageProductDependencies = (
+				A8F95A8D28D38A1700787A22 /* SnapKit */,
+			);
 			productName = DisneyWorld;
 			productReference = A8F95A4228D368D300787A22 /* DisneyWorld.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +291,9 @@
 				Base,
 			);
 			mainGroup = A8F95A3928D368D300787A22;
+			packageReferences = (
+				A8F95A8C28D38A1700787A22 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A8F95A4328D368D300787A22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -668,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8F95A8C28D38A1700787A22 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8F95A8D28D38A1700787A22 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8F95A8C28D38A1700787A22 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8F95A3A28D368D300787A22 /* Project object */;
 }
