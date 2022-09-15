@@ -16,6 +16,8 @@ class CharactersView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
+        tableView.layer.cornerRadius = 15
+        tableView.separatorColor = .white.withAlphaComponent(0.3)
         return tableView
     }()
     

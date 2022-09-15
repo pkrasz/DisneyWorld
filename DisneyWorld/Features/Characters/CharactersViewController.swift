@@ -82,10 +82,25 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewIdentifier, for: indexPath)
         let character = charactersArr[indexPath.row]
         cell.textLabel?.text = character.name
-        cell.backgroundColor = .clear
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .darkGray.withAlphaComponent(0.5)
+        
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = .white.withAlphaComponent(0.3)
+        cell.selectedBackgroundView = bgColorView
+        
+        let image = UIImage(systemName: "chevron.right")
+        let accessory  = UIImageView(frame:CGRect(x:0, y:0, width:(image?.size.width)!, height:(image?.size.height)!))
+        accessory.image = image
+        accessory.tintColor = .white.withAlphaComponent(0.3)
+        cell.accessoryView = accessory
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(charactersArr[indexPath.row])
+    }
     
     
 }
