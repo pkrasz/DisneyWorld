@@ -22,6 +22,7 @@
 		A8F95A8828D383F600787A22 /* CharactersEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */; };
 		A8F95A8B28D3874200787A22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8A28D3874200787A22 /* Character.swift */; };
 		A8F95A8E28D38A1700787A22 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8F95A8D28D38A1700787A22 /* SnapKit */; };
+		A8F95A9028D38A8100787A22 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A8F28D38A8100787A22 /* CharactersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		A8F95A8528D3827B00787A22 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEnvironment.swift; sourceTree = "<group>"; };
 		A8F95A8A28D3874200787A22 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		A8F95A8F28D38A8100787A22 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				A8F95A8028D37B6400787A22 /* CharactersViewController.swift */,
 				A8F95A8228D37BA300787A22 /* CharactersCoordinator.swift */,
 				A8F95A8728D383F600787A22 /* CharactersEnvironment.swift */,
+				A8F95A8F28D38A8100787A22 /* CharactersView.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				A8F95A8628D3827B00787A22 /* ApiClient.swift in Sources */,
 				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
 				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
+				A8F95A9028D38A8100787A22 /* CharactersView.swift in Sources */,
 				A8F95A8B28D3874200787A22 /* Character.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
 				A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */,
