@@ -27,6 +27,7 @@
 		A8F95A9528D3AC3400787A22 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */; };
 		A8F95A9728D3AC4500787A22 /* CharacterDetailsEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */; };
 		A8F95A9928D3AC5600787A22 /* CharacterDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */; };
+		A8F95A9B28D3CEFD00787A22 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F95A9A28D3CEFD00787A22 /* DetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsEnvironment.swift; sourceTree = "<group>"; };
 		A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsCoordinator.swift; sourceTree = "<group>"; };
+		A8F95A9A28D3CEFD00787A22 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				A8F95A9428D3AC3400787A22 /* CharacterDetailsViewController.swift */,
 				A8F95A9628D3AC4500787A22 /* CharacterDetailsEnvironment.swift */,
 				A8F95A9828D3AC5600787A22 /* CharacterDetailsCoordinator.swift */,
+				A8F95A9A28D3CEFD00787A22 /* DetailsView.swift */,
 			);
 			path = CharacterDetails;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				A8F95A7E28D3787E00787A22 /* Coordinator.swift in Sources */,
 				A8F95A7C28D377C000787A22 /* CoordinatorType.swift in Sources */,
 				A8F95A9028D38A8100787A22 /* CharactersView.swift in Sources */,
+				A8F95A9B28D3CEFD00787A22 /* DetailsView.swift in Sources */,
 				A8F95A8B28D3874200787A22 /* Character.swift in Sources */,
 				A8F95A4628D368D300787A22 /* AppDelegate.swift in Sources */,
 				A8F95A8328D37BA300787A22 /* CharactersCoordinator.swift in Sources */,

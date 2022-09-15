@@ -30,8 +30,8 @@ class CharacterDetailsView: UIView {
         return label
     }()
     
-    let detailsView: UIView = {
-        let view = UIView()
+    var detailsView: DetailsView = {
+        let view = DetailsView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .darkGray.withAlphaComponent(0.5)
         view.layer.cornerRadius = 15

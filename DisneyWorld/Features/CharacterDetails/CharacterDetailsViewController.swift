@@ -21,7 +21,6 @@ class CharacterDetailsViewController: UIViewController {
         }
     }
 
-
     var contentView: CharacterDetailsView {
         return view as! CharacterDetailsView
     }
@@ -54,6 +53,14 @@ class CharacterDetailsViewController: UIViewController {
     //MARK: - Setup
     
     private func setupView() {
+        contentView.detailsView.nameLabel.text = character.name
+        contentView.detailsView.filmsLabel.text = printArray(array: character.films)
+        contentView.detailsView.shortFilmsLabel.text = printArray(array: character.shortFilms)
+        contentView.detailsView.tvShowsLabel.text = printArray(array: character.tvShows)
+        contentView.detailsView.videoGamesLabel.text = printArray(array: character.videoGames)
+        contentView.detailsView.parkAttractionsLabel.text = printArray(array: character.parkAttractions)
+        contentView.detailsView.alliesLabel.text = printArray(array: character.allies)
+        contentView.detailsView.enemiesLabel.text = printArray(array: character.enemies)
     }
     
     private func setupBindings() {
@@ -71,5 +78,18 @@ class CharacterDetailsViewController: UIViewController {
     
     func setImage() {
         contentView.characterImage.image = characterImage
+    }
+    
+    func printArray(array: [String]) -> String {
+        var text = ""
+        if !array.isEmpty {
+            for string in array {
+                text += ", \(string)"
+            }
+        } else {
+            text = "-/-"
+        }
+        
+        return text
     }
 }
