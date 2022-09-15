@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import SnapKit
 
 class CharactersView: UIView {
 
     //MARK: - Subview
     
-    
+    let charactersTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .white
+        return tableView
+    }()
     
     //MARK: - Initializator
     
@@ -30,15 +36,20 @@ class CharactersView: UIView {
     //MARK: - Setup
     
     func setupView() {
-        
+        backgroundColor = .systemCyan
     }
     
     func setupSubviews() {
-        
+        addSubview(charactersTableView)
     }
     
     func setupConstraints() {
-        
+        charactersTableView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide).offset(20)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.bottom.equalToSuperview().offset(-20)
+        }
     }
     
 }
