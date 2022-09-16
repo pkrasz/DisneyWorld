@@ -54,7 +54,6 @@ final class CharactersViewController: UIViewController {
     //MARK: - Setup
     
     private func setupView() {
-        
         contentView.charactersTableView.dataSource = self
         contentView.charactersTableView.delegate = self
         contentView.charactersTableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewIdentifier)

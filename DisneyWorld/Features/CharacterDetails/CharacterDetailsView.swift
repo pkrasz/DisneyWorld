@@ -33,9 +33,15 @@ class CharacterDetailsView: UIView {
     var detailsView: DetailsView = {
         let view = DetailsView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .darkGray.withAlphaComponent(0.5)
-        view.layer.cornerRadius = 15
         return view
+    }()
+    
+    var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = .darkGray.withAlphaComponent(0.5)
+        scrollView.layer.cornerRadius = 15
+        return scrollView
     }()
     
     
@@ -44,6 +50,7 @@ class CharacterDetailsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupScrollview()
         setupView()
         setupSubviews()
         setupConstraints()
@@ -68,10 +75,14 @@ class CharacterDetailsView: UIView {
 
     }
     
+    func setupScrollview() {
+        scrollView.addSubview(detailsView)
+    }
+    
     func setupSubviews() {
 
         [characterImage,
-        detailsView].forEach(addSubview)
+        scrollView].forEach(addSubview)
     }
     
     func setupConstraints() {
@@ -82,16 +93,22 @@ class CharacterDetailsView: UIView {
             make.centerX.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
-//            make.bottom.lessThanOrEqualToSuperview()
         }
-        detailsView.snp.makeConstraints { make in
+        scrollView.snp.makeConstraints { make in
             make.top.equalTo(characterImage.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview().offset(-20)
+            make.width.equalToSuperview()
         }
         
-        
+        detailsView.snp.makeConstraints { make in
+            make.top.equalTo(scrollView.snp.top)
+            make.leading.equalTo(scrollView.snp.leading)
+            make.trailing.equalTo(scrollView.snp.trailing)
+            make.bottom.equalTo(scrollView.snp.bottom)
+            make.width.equalToSuperview()
+        }
     }
     
 }

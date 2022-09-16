@@ -84,7 +84,11 @@ class CharacterDetailsViewController: UIViewController {
         var text = ""
         if !array.isEmpty {
             for string in array {
-                text += ", \(string)"
+                if string != array.first {
+                    text += ", \(string)"
+                } else {
+                    text = string
+                }
             }
         } else {
             text = "-/-"
