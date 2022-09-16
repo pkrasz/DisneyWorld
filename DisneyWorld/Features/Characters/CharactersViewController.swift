@@ -54,6 +54,8 @@ final class CharactersViewController: UIViewController {
     //MARK: - Setup
     
     private func setupView() {
+        title = "Disney Characters"
+        
         contentView.charactersTableView.dataSource = self
         contentView.charactersTableView.delegate = self
         contentView.charactersTableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewIdentifier)

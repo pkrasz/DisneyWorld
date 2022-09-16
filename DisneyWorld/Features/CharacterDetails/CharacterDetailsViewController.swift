@@ -17,6 +17,7 @@ class CharacterDetailsViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
                 self.setImage()
+                self.contentView.activityIndicatorView.isHidden = true
             }
         }
     }

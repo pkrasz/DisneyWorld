@@ -44,6 +44,15 @@ class CharacterDetailsView: UIView {
         return scrollView
     }()
     
+    let activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.startAnimating()
+        activityIndicator.color = .blue
+        activityIndicator.isHidden = false
+        return activityIndicator
+    }()
+    
     
     //MARK: - Initializator
     
@@ -82,7 +91,8 @@ class CharacterDetailsView: UIView {
     func setupSubviews() {
 
         [characterImage,
-        scrollView].forEach(addSubview)
+        scrollView,
+        activityIndicatorView].forEach(addSubview)
     }
     
     func setupConstraints() {
@@ -99,7 +109,7 @@ class CharacterDetailsView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.bottom.equalToSuperview().offset(-20)
-            make.width.equalToSuperview()
+            make.width.equalToSuperview().offset(-40)
         }
         
         detailsView.snp.makeConstraints { make in
@@ -107,7 +117,12 @@ class CharacterDetailsView: UIView {
             make.leading.equalTo(scrollView.snp.leading)
             make.trailing.equalTo(scrollView.snp.trailing)
             make.bottom.equalTo(scrollView.snp.bottom)
-            make.width.equalToSuperview()
+            make.width.equalToSuperview().offset(-40)
+        }
+        
+        activityIndicatorView.snp.makeConstraints { make in
+            make.centerX.equalTo(characterImage.snp.centerX)
+            make.centerY.equalTo(characterImage.snp.centerY)
         }
     }
     
