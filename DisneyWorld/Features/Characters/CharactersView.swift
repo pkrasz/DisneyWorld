@@ -9,7 +9,11 @@ import UIKit
 import SnapKit
 
 class CharactersView: UIView {
-
+    
+    //MARK: - Properties
+    
+    var gradientLayer = CAGradientLayer()
+    
     //MARK: - Subview
     
     let charactersTableView: UITableView = {
@@ -39,8 +43,6 @@ class CharactersView: UIView {
     //MARK: - Setup
     
     func setupView() {
-
-        let gradientLayer = CAGradientLayer()
         gradientLayer.frame = UIScreen.main.bounds
         gradientLayer.colors = [
             UIColor.systemPink.cgColor,

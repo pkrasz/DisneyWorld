@@ -40,6 +40,12 @@ final class CharactersViewController: UIViewController {
     
     //MARK: - Lifecycle
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.contentView.gradientLayer.frame = UIScreen.main.bounds
+        }
+    }
+    
     override func loadView() {
         view = CharactersView()
     }
@@ -59,6 +65,7 @@ final class CharactersViewController: UIViewController {
         contentView.charactersTableView.dataSource = self
         contentView.charactersTableView.delegate = self
         contentView.charactersTableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewIdentifier)
+        
     }
     
     private func setupBindings() {

@@ -51,6 +51,12 @@ class CharacterDetailsViewController: UIViewController {
         setupBindings()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.contentView.gradientLayer.frame = UIScreen.main.bounds
+        }
+    }
+    
     //MARK: - Setup
     
     private func setupView() {

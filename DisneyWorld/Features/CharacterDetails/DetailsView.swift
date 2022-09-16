@@ -26,6 +26,8 @@ class DetailsView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .boldSystemFont(ofSize: Constants.name)
         label.textColor = .white
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
         return label
     }()
     
@@ -208,11 +210,11 @@ class DetailsView: UIView {
         nameTitleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(Constants.plusMargin)
             make.leading.equalToSuperview().offset(Constants.plusMargin)
-            make.bottom.equalTo(nameLabel.snp.bottom)
+            make.trailing.lessThanOrEqualToSuperview().offset(Constants.minusMargin)
         }
         nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameTitleLabel.snp.top)
-            make.leading.equalTo(nameTitleLabel.snp.trailing).offset(Constants.afterTitleSpace)
+            make.top.equalTo(nameTitleLabel.snp.bottom).offset(Constants.lineSpacing)
+            make.leading.equalTo(nameTitleLabel.snp.leading)
             make.trailing.lessThanOrEqualToSuperview().offset(Constants.minusMargin)
         }
         
